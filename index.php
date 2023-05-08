@@ -46,6 +46,13 @@
                         <p></p>
                     </div>
                 </div>
+                <div class="col-lg-12">
+                    <div id="reset-score-btn">
+                        <button>
+                            Rénitialiser les scores
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

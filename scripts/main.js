@@ -9,11 +9,32 @@ let btnsContainer = document.querySelectorAll(".button-row > .col-lg-2");
 
 let playerScore = 0;
 let computerScore = 0;
+
 let currentPlayerScore = playerScore;
 let currentcomputerScore = computerScore;
 
 let currentPlayerScoreElement = document.querySelector("#score-number-you > p");
 let currentComputerScoreElement = document.querySelector("#score-number-computer > p");
+
+let playerScoreJson = localStorage.getItem("Player Score");
+playerScore = JSON.parse(playerScoreJson);
+let computerScoreJson = localStorage.getItem("Computer Score"); 
+computerScore = JSON.parse(computerScoreJson);
+
+if (playerScoreJson === null) {
+    playerScore = 0;
+  } else {
+    playerScore = JSON.parse(playerScoreJson);
+  }
+  
+  if (computerScoreJson === null) {
+    computerScore = 0;
+  } else {
+    computerScore = JSON.parse(computerScoreJson);
+  }
+
+currentPlayerScoreElement.innerText = playerScore;
+currentComputerScoreElement.innerText = computerScore;
 
 rockBtn.addEventListener("click", function(){
     let randomSign = Math.floor(Math.random() * signs.length);
@@ -25,10 +46,15 @@ rockBtn.addEventListener("click", function(){
     let playerChooseElement = document.createElement("i");
     playerChooseElement.classList.add("fa-sharp", "fa-solid", "fa-hand-back-fist")
     let computerChooseElement = document.createElement("i");
+    let btnRetry = document.createElement("button");
+    btnRetry.innerText = "Retry";
+    btnRetry.id = "btn-retry";
+
     btnsRow.appendChild(resultContainer);
     resultContainer.appendChild(resultContent);
     resultContainer.appendChild(playerChooseElement);
     resultContainer.appendChild(computerChooseElement);
+    resultContainer.appendChild(btnRetry);
     
     
     for (i = 0; i < btnsContainer.length; i++){
@@ -57,8 +83,16 @@ rockBtn.addEventListener("click", function(){
     localStorage.setItem("Player Score", playerScore);
     localStorage.setItem("Computer Score", computerScore);
 
-    console.log(playerScore);
-    console.log(computerScore);
+    btnRetry.addEventListener("click", function(){
+        for (i = 0; i < btnsContainer.length; i++){
+            btnsContainer[i].style.display = "block";
+        }
+        btnsRow.removeChild(resultContainer);
+        resultContainer.removeChild(resultContent);
+        resultContainer.removeChild(playerChooseElement);
+        resultContainer.removeChild(computerChooseElement);
+        resultContainer.removeChild(btnRetry);
+    })
 })
 
 paperBtn.addEventListener("click", function(){
@@ -71,10 +105,15 @@ paperBtn.addEventListener("click", function(){
     let playerChooseElement = document.createElement("i");
     playerChooseElement.classList.add("fa-solid", "fa-hand")
     let computerChooseElement = document.createElement("i");
+    let btnRetry = document.createElement("button");
+    btnRetry.innerText = "Retry";
+    btnRetry.id = "btn-retry";
+
     btnsRow.appendChild(resultContainer);
     resultContainer.appendChild(resultContent);
     resultContainer.appendChild(playerChooseElement);
     resultContainer.appendChild(computerChooseElement);
+    resultContainer.appendChild(btnRetry);
     
     for (i = 0; i < btnsContainer.length; i++){
         btnsContainer[i].style.display = "none";
@@ -102,6 +141,17 @@ paperBtn.addEventListener("click", function(){
     currentComputerScoreElement.innerText = computerScore;
     localStorage.setItem("Player Score", playerScore);
     localStorage.setItem("Computer Score", computerScore);
+
+    btnRetry.addEventListener("click", function(){
+        for (i = 0; i < btnsContainer.length; i++){
+            btnsContainer[i].style.display = "block";
+        }
+        btnsRow.removeChild(resultContainer);
+        resultContainer.removeChild(resultContent);
+        resultContainer.removeChild(playerChooseElement);
+        resultContainer.removeChild(computerChooseElement);
+        resultContainer.removeChild(btnRetry);
+    })
 })
 
 scissorsBtn.addEventListener("click", function(){
@@ -114,10 +164,15 @@ scissorsBtn.addEventListener("click", function(){
     let playerChooseElement = document.createElement("i");
     playerChooseElement.classList.add("fa-solid", "fa-hand-scissors")
     let computerChooseElement = document.createElement("i");
+    let btnRetry = document.createElement("button");
+    btnRetry.innerText = "Retry";
+    btnRetry.id = "btn-retry";
+
     btnsRow.appendChild(resultContainer);
     resultContainer.appendChild(resultContent);
     resultContainer.appendChild(playerChooseElement);
     resultContainer.appendChild(computerChooseElement);
+    resultContainer.appendChild(btnRetry);
     
     for (i = 0; i < btnsContainer.length; i++){
         btnsContainer[i].style.display = "none";
@@ -146,7 +201,33 @@ scissorsBtn.addEventListener("click", function(){
     currentComputerScoreElement.innerText = computerScore;
     localStorage.setItem("Player Score", playerScore);
     localStorage.setItem("Computer Score", computerScore);
+
+    btnRetry.addEventListener("click", function(){
+        for (i = 0; i < btnsContainer.length; i++){
+            btnsContainer[i].style.display = "block";
+        }
+        btnsRow.removeChild(resultContainer);
+        resultContainer.removeChild(resultContent);
+        resultContainer.removeChild(playerChooseElement);
+        resultContainer.removeChild(computerChooseElement);
+        resultContainer.removeChild(btnRetry);
+    })
 })
+
+let resetScoresBtn = document.querySelector("#reset-score-btn");
+resetScoresBtn.addEventListener("click", function(){
+    localStorage.removeItem("Player Score");
+    localStorage.removeItem("Computer Score");
+    playerScore = 0;
+    computerScore = 0;
+    currentPlayerScoreElement.innerText = playerScore;
+    currentComputerScoreElement.innerText = computerScore;
+})
+
+
+   
+
+    
 
 
 
