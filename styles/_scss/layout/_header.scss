@@ -1,8 +1,14 @@
 header{
+    .logo{
+        margin-top: 50px;
+        position: absolute;
+        top: 0;
+    }
     .title{
         text-align: center;
         h1{
             padding-bottom: 15px;
+            padding-top: 50px;
         }
         p{
             font-size: 18px;

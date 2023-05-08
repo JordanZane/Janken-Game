@@ -12,25 +12,25 @@
 
     <main>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
+            <div class="row button-row">
+                <div class="col-lg-2">
                     <button>
                         <i class="fa-sharp fa-solid fa-hand-back-fist"></i>
                     </button>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                     <button>
                         <i class="fa-solid fa-hand"></i>
                     </button>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                     <button>
                         <i class="fa-solid fa-hand-scissors"></i>
                     </button>
                 </div>
             </div>
             <p>Make your choice</p>
-            <div class="row">
+            <div class="row scores-row">
                 <div class="col-lg-12">
                     <h2>Scores : </h2>
                 </div>
