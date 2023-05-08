@@ -15,17 +15,17 @@
             <div class="row">
                 <div class="col-lg-4">
                     <button>
-                        <img src="images/rock.png" alt="rock">
+                        <i class="fa-sharp fa-solid fa-hand-back-fist"></i>
                     </button>
                 </div>
                 <div class="col-lg-4">
                     <button>
-                        <img src="images/paper.png" alt="paper">
+                        <i class="fa-solid fa-hand"></i>
                     </button>
                 </div>
                 <div class="col-lg-4">
                     <button>
-                        <img src="images/scissors.png" alt="scissors">
+                        <i class="fa-solid fa-hand-scissors"></i>
                     </button>
                 </div>
             </div>
