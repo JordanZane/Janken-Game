@@ -14,17 +14,17 @@
         <div class="container">
             <div class="row button-row">
                 <div class="col-lg-2">
-                    <button>
+                    <button id ="rock-btn">
                         <i class="fa-sharp fa-solid fa-hand-back-fist"></i>
                     </button>
                 </div>
                 <div class="col-lg-2">
-                    <button>
+                    <button id ="paper-btn">
                         <i class="fa-solid fa-hand"></i>
                     </button>
                 </div>
                 <div class="col-lg-2">
-                    <button>
+                    <button id ="scissors-btn">
                         <i class="fa-solid fa-hand-scissors"></i>
                     </button>
                 </div>
@@ -37,13 +37,13 @@
                 <div class="col-6">
                     <p>You :</p>
                     <div id="score-number-you">
-                        <p>0</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class="col-6">
                     <p>Computer :</p>
                     <div id="score-number-computer">
-                        <p>0</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
