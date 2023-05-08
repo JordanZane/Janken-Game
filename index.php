@@ -13,8 +13,30 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-lg-4">
 
+                </div>
+                <div class="col-lg-4">
+
+                </div>
+                <div class="col-lg-4">
+
+                </div>
+            </div>
+            <p>Make your choice</p>
+            <div class="row">
+                <h2>Scores : </h2>
+                <div class="col-lg-6">
+                    <p>You :</p>
+                    <div id="score-number-you">
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p>Computer :</p>
+                    <div id="score-number-computer">
+                        <p>0</p>
+                    </div>
                 </div>
             </div>
         </div>
