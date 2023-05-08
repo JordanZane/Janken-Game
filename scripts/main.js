@@ -12,6 +12,9 @@ let computerScore = 0;
 let currentPlayerScore = playerScore;
 let currentcomputerScore = computerScore;
 
+let currentPlayerScoreElement = document.querySelector("#score-number-you > p");
+let currentComputerScoreElement = document.querySelector("#score-number-computer > p");
+
 rockBtn.addEventListener("click", function(){
     let randomSign = Math.floor(Math.random() * signs.length);
     let computerSign = signs[randomSign];
@@ -26,6 +29,7 @@ rockBtn.addEventListener("click", function(){
     resultContainer.appendChild(resultContent);
     resultContainer.appendChild(playerChooseElement);
     resultContainer.appendChild(computerChooseElement);
+    
     
     for (i = 0; i < btnsContainer.length; i++){
         btnsContainer[i].style.display = "none";
@@ -47,6 +51,11 @@ rockBtn.addEventListener("click", function(){
         resultContent.innerHTML = "Gagné !";
         playerScore = playerScore +1;
     }
+
+    currentPlayerScoreElement.innerText = playerScore;
+    currentComputerScoreElement.innerText = computerScore;
+    localStorage.setItem("Player Score", playerScore);
+    localStorage.setItem("Computer Score", computerScore);
 
     console.log(playerScore);
     console.log(computerScore);
@@ -88,6 +97,11 @@ paperBtn.addEventListener("click", function(){
         resultContent.innerHTML = "Perdu !";
         computerScore = computerScore +1;
     }
+
+    currentPlayerScoreElement.innerText = playerScore;
+    currentComputerScoreElement.innerText = computerScore;
+    localStorage.setItem("Player Score", playerScore);
+    localStorage.setItem("Computer Score", computerScore);
 })
 
 scissorsBtn.addEventListener("click", function(){
@@ -127,6 +141,11 @@ scissorsBtn.addEventListener("click", function(){
         computerChooseElement.classList.add("fa-solid", "fa-hand-scissors");
         resultContent.innerHTML = "Egalité !";
     }
+
+    currentPlayerScoreElement.innerText = playerScore;
+    currentComputerScoreElement.innerText = computerScore;
+    localStorage.setItem("Player Score", playerScore);
+    localStorage.setItem("Computer Score", computerScore);
 })
 
 
