@@ -14,18 +14,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-
+                    <button>
+                        <img src="images/rock.png" alt="rock">
+                    </button>
                 </div>
                 <div class="col-lg-4">
-
+                    <button>
+                        <img src="images/paper.png" alt="paper">
+                    </button>
                 </div>
                 <div class="col-lg-4">
-
+                    <button>
+                        <img src="images/scissors.png" alt="scissors">
+                    </button>
                 </div>
             </div>
             <p>Make your choice</p>
             <div class="row">
-                <h2>Scores : </h2>
+                <div class="col-lg-12">
+                    <h2>Scores : </h2>
+                </div>
                 <div class="col-lg-6">
                     <p>You :</p>
                     <div id="score-number-you">
