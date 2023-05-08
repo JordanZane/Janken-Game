@@ -34,13 +34,13 @@
                 <div class="col-lg-12">
                     <h2>Scores : </h2>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-6">
                     <p>You :</p>
                     <div id="score-number-you">
                         <p>0</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-6">
                     <p>Computer :</p>
                     <div id="score-number-computer">
                         <p>0</p>
