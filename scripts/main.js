@@ -56,7 +56,6 @@ rockBtn.addEventListener("click", function(){
     resultContainer.appendChild(computerChooseElement);
     resultContainer.appendChild(btnRetry);
     
-    
     for (i = 0; i < btnsContainer.length; i++){
         btnsContainer[i].style.display = "none";
     }
