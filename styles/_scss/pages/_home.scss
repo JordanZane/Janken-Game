@@ -60,12 +60,12 @@ body{
                     color: $color-white;
                     background: unset;
                     border: 1px solid $color-beige;
-                    font-size: 18px;
+                    font-size: 20px;
                     padding: 3px 30px;
                     @include transition(0.3s);
                     &:hover{
-                        background-color: $color-beige;
-                    }
+                        background-color: $color-white;
+                        color: $color-beige;                    }
                 }
             }
         }
@@ -91,10 +91,11 @@ body{
                     color: $color-white;
                     background: unset;
                     border: 1px solid $color-beige;
-                    font-size: 18px;
+                    font-size: 20px;
                     @include transition(0.3s);
                     &:hover{
-                        background-color: $color-beige;
+                        background-color: $color-white;
+                        color: $color-beige;
                     }
                 }
             }

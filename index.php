@@ -64,7 +64,7 @@
     </footer>
 
     <script type="text/javascript" src="scripts/main.js"></script>
-    <script src="tsparticles.engine.min.js"></script>
+   <!-- <script src="tsparticles.engine.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2/tsparticles.engine.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-interaction-external-push@2/tsparticles.interaction.external.push.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-move-base@2/tsparticles.move.base.min.js"></script>
